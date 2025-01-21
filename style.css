@@ -1,0 +1,112 @@
+:root {
+    --color-background: #1a1a2e;
+    --color-primary: #e94560;
+    --color-secondary: #16213e;
+    --color-text: #e8e8e8;
+    --color-card: #0f3460;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --radius: 8px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--color-card);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+.navegacion__lista {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion__lista a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navegacion__lista a:hover {
+    color: var(--color-primary);
+}
+
+.presentacion {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.presentacion__foto {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+section {
+    padding: 2rem 1rem;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.habilidades__lista, .aficiones__lista {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.habilidades__lista li, .aficiones__lista li {
+    text-align: center;
+    padding: 1rem;
+    background: var(--color-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100px;
+}
+
+.habilidades__lista img, .aficiones__lista img {
+    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .presentacion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: left;
+    }
+}
